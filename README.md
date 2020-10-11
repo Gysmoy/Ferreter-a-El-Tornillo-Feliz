@@ -8,8 +8,7 @@ from tkinter import *
 </pre>
 
 # Creamos la ventana
-
-<p>Crearemos la bentana y le asignaremos un tamaño especifico </p>
+<p>Crearemos la ventana y le asignaremos un tamaño y color especifico</p>
 <pre>
 ventana = Tk()
 ventana.geometry('720x680')
@@ -18,8 +17,7 @@ ventana.configure(bg = 'gray90')
 </pre>
 
 # Título
-
-<p>Una vez asignada los tamaños le pondremso un titulo</p>
+<p>Una vez asignados los tamaños le pondremos un título</p>
 <pre>
 ventana.title("Ferretería El Tornillo Feliz")
 </pre>
@@ -32,9 +30,9 @@ TextoTitulo = Label(ventana, text = ' Ferretería El Tornillo Feliz', bg = 'gray
 TextoTitulo.pack(pady=10)
 </pre>
 
-# Creamos los primeros textos con sus respectivas cajas de texto
+# Creamos los primeros <i>Label</i>'s y sus respectivos <i>Entry</i>'s
 
-<p>Creamos las etiquetas de texto con sus respectivas cajas de texto para el ingreso de datos como:<b> Nombre, Apellidos, DNi, Direccíon y teléfono</b></p>
+<p>Creamos las etiquetas de texto con sus respectivas cajas de texto para el ingreso de datos como:<b>Nombre, Apellidos, DNI, Direccíon y Teléfono</b></p>
 <pre>
 TextoDNI = Label(ventana, text = 'DNI: ', bg = 'gray90', fg = 'gray9', font=("Arial", 13)).place(x = 20, y = 60)
 CajaDNI = Entry(ventana, bg = 'white', fg = 'gray9',font = '15',border = '2').place(x = 140, y = 60, width = 200, height = 30)
@@ -53,7 +51,7 @@ CajaTelefono = Entry(ventana, bg = 'white', fg = 'gray9', font = '15', border = 
 </pre>
 
 # Títulos de las Tablas del producto 
-<p>Creamos las etiquetas de texto para los datos de los productos tales como el <b>Código del producto, la descripción, unidad, cantidad, precio y el subtotal</b></p>
+<p>Creamos las etiquetas de texto para los datos de los productos tales como el <b>Código del producto, la descripción, unidad, cantidad, precio y el Subtotal</b></p>
 <pre>
 TextoCod_Prod = Label(ventana , text = 'Cod_prod', bg = 'gray90', fg = 'gray9', font=("Arial", 13)).place(x =20, y = 240)
 TextoDescripcion = Label(ventana, text = 'Descripción', bg = 'gray90', fg = 'gray9', font=("Arial", 13)).place(x = 115, y = 240)
@@ -71,7 +69,7 @@ CejaCod_Prod2 = Entry(ventana, bg = 'white', fg = 'gray9', font = '10', border =
 CejaCod_Prod3 = Entry(ventana, bg = 'white', fg = 'gray9', font = '10', border = '2').place(x = 20, y = 360, width = 80, height = 25)
 </pre>
 
-# Cajas de Cantridad
+# Cajas de Cantidad
 
 <p> En estas cajas se almacenaran las cantidades de los productos<p>
 <pre>
@@ -85,20 +83,12 @@ CejaCantidad3 = Entry(ventana, bg = 'white', fg = 'gray9', font = '10', border =
 <pre>
 TextoPrecio = Label(ventana, text = 'Total', bg = 'gray90', fg = 'gray9',   font=("Sitka Small", 20)).place(x = 600, y = 400)
 </pre>
-
 # Botones
-
-<p>Por ultimo crearemos los botones para ejecutar las opciones de <b>Guardar e Imprimir</b> la boleta de ventas</p>
+<p>Por último crearemos los botones para ejecutar las opciones de <b>Guardar e Imprimir</b> la boleta de ventas</p>
 <pre>
 BotonGuardar = Button(ventana, text = 'Guardar',bg = 'green2', fg = 'white', font= '"Verdana" 12', border = '0', activebackground="green yellow",borderwidth = 15).place(x = 180, y = 460, width = 250, height = 50)
 BotonImprimir = Button(ventana, text = 'Imprimir', bg = 'green2', fg = 'white', font = '"Verdana" 12', border = '0',activebackground="green yellow", borderwidth = 15).place(x = 450 , y = 460, width = 250, height = 50)
 </pre>
 
-# Se muetra la pantalla 
-
-<p>Por ultimo ordenamos que se mantenga y no sierre la ventana con la funcion <b>" mainloop "</b></p>
-<pre>
-ventana.mainloop()
-</pre>
-
-
+# Evitando cierres inesperados
+<p>Por ultimo evitamos el cierre inesperado de la ventana con <code>ventana.mainloop()</code></p>
